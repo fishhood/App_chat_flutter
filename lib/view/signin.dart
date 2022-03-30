@@ -62,7 +62,7 @@ class _SignInState extends State<SignIn> {
     }
   }
 
-  AuthService authService = new AuthService();
+  // AuthService authService = new AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -164,10 +164,7 @@ class _SignInState extends State<SignIn> {
                           style: TextStyle(color: Colors.black87, fontSize: 17),
                         ),
                       ),
-                      onTap: () {
-                        authService.signInWithGoogle(
-                            context); // gọi đăng nhập bằng Google trong này
-                      },
+                      onTap: authMethods.signInWithGoogle,
                     ),
                     SizedBox(
                       height: 16,
